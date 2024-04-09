@@ -19,6 +19,7 @@ public class BasketItem : BaseEntity
 
     public void AddQuantity(int quantity)
     {
+        // OutOfRange metodu quantity parametresinin belirli bir aralıkta olup olmadığını kontrol etmek için kullanılıyor.
         Guard.Against.OutOfRange(quantity, nameof(quantity), 0, int.MaxValue);
 
         Quantity += quantity;
